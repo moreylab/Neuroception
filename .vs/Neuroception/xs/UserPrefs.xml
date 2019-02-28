@@ -1,6 +1,6 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{07461CD4-3509-4F69-8A2C-D84A4A5E6407}|Default">
   <MonoDevelop.Ide.ItemProperties.Neuroception.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7C48FFE2-C09D-4FDC-BA6B-A73DE9A00E76" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Neuroception/App.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Neuroception Status">
     <Files>
       <File FileName="Neuroception/App.xaml.cs" Line="200" Column="62" />
       <File FileName="Neuroception/App.xaml" Line="77" Column="15" />
@@ -15,13 +15,20 @@
       <File FileName="Neuroception/Pages/HomePage.xaml.cs" Line="298" Column="12" />
       <File FileName="Neuroception/Custom Controls/NavigationBar.cs" Line="82" Column="60" />
       <File FileName="Neuroception/Custom Controls/SettingsMenu.cs" Line="51" Column="60" />
+      <File FileName="Neuroception/Data Models/AppConstants.cs" Line="16" Column="105" />
+      <File FileName="Neuroception Status" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Neuroception" expanded="True" selected="True">
+          <Node name="Neuroception" expanded="True">
             <Node name="Neuroception" expanded="True">
+              <Node name="Data Models" expanded="True">
+                <Node name="AppConstants.cs" selected="True" />
+              </Node>
+              <Node name="Pages" expanded="True" />
               <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
             </Node>
             <Node name="Neuroception.iOS" expanded="True" />
           </Node>
