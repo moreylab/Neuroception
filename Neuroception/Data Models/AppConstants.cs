@@ -13,8 +13,6 @@ namespace Neuroception.DataModels
         public static readonly Color NavBarColor = Color.FromRgb(240, 252, 252);  // white-blue background color for NAV BAR
         public static readonly Color GreenColor = Color.FromRgb(0, 255, 0);  // green for Entry text
 
-        public static readonly Color TestColor = Color.FromRgb(0, 255, 0);  // green for Entry text  ***
-
         public static readonly Color SettingsPanelColor = Color.FromRgb(242, 242, 242);  // green for Entry text
         public static readonly Color EntryBackgroundColor = DarkBlueColor.MultiplyAlpha(0.30);  // mask background color for Entry
         public static readonly Color WhiteMaskColor = Color.White.MultiplyAlpha(0.80);  // mask background color for Entry
