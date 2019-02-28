@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Neuroception"
+    xmlns:views="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+    x:Class="Neuroception.Pages.HomePage"
+    NavigationPage.HasNavigationBar = "false">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Double x:Key="batteryHeight">12.</x:Double>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <ScrollView>
+        <local:GradientColorStack StartColor="{x:Static local:DataModels.AppConstants.BlueColor}" 
+                                  EndColor="{x:Static local:DataModels.AppConstants.OrangeColor}"
+                                  x:Name="backgroundView" Spacing="0">
+            <AbsoluteLayout HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="Transparent" 
+                            x:Name="mainView">
+            
+            <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" x:Name="notMenu"> 
+                        <!-- Abs layout needed for MENU to display properly -->
+                <Label Style="{StaticResource TitleTextStyle}" Margin="0, 10, 0, 10" 
+                       Text="Device Status" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+                <BoxView BackgroundColor="Black" HeightRequest="1.5" HorizontalOptions="Fill" />
+                <StackLayout Orientation="Horizontal" HeightRequest="120" HorizontalOptions="Fill" 
+                             Margin="20, 0, 0, 0" >
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" >
+                        <AbsoluteLayout VerticalOptions="Start" HorizontalOptions="Center" >
+                            <Image Source="icon_watch.png" HorizontalOptions="Center" Aspect="AspectFit" HeightRequest="50" WidthRequest="100" />
+                            <Button Image="icon_info.png" HeightRequest="25" Clicked="InfoBtnClicked" IsVisible="{Binding ShowFlag}"
+                                AbsoluteLayout.LayoutBounds="1, 0, 30, 30" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                        </AbsoluteLayout>
+                        <Label Text="Zephyr Bioharness 3" TextColor="Black" HeightRequest="20" FontSize="12" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" Margin="0, 0, 0, 3" >
+                            <AbsoluteLayout VerticalOptions="End" WidthRequest="35" HeightRequest="{StaticResource batteryHeight}" BackgroundColor="Black">
+                                <BoxView Color="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" />
+                                <BoxView Color="{Binding BatteryFillColor}" AbsoluteLayout.LayoutBounds="{Binding InsideRectangle}" AbsoluteLayout.LayoutFlags="None" />
+                            </AbsoluteLayout>
+                            <Label Text="{Binding BatteryLife, StringFormat='{0}%'}" TextColor="Black" HeightRequest="20" FontSize="{StaticResource batteryHeight}"
+                                   HorizontalTextAlignment="Center" VerticalTextAlignment="End" />
+                        </StackLayout>
+                    </StackLayout>
+                    <Label x:Name="statusLbl" Text="{Binding Status}" TextColor="Black" FontSize="12" IsVisible="false" Margin="0, 15, 0, 0"
+                           VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="170" />
+                </StackLayout>
+                <BoxView BackgroundColor="Black" HeightRequest="1.5" HorizontalOptions="Fill" />
+
+                <Label Style="{StaticResource TitleTextStyle}" Margin="0, 15, 0, 10" Text="Incoming Data" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+                <!--Use a list view to display each individual data stream, customize cells & match each graph by TIME on X axis -->
+
+                <ListView x:Name="streamList" HorizontalOptions="Center" VerticalOptions="Fill" RowHeight="{x:Static local:DataModels.AppConstants.HomePageRowHeight}"
+                      BackgroundColor="{x:Static local:DataModels.AppConstants.EntryBackgroundColor}" ItemSelected="Handle_ItemSelected" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <AbsoluteLayout>
+                                    <Label Text="{Binding Title}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
+                                           TextColor="Black" BackgroundColor="White"
+                                           AbsoluteLayout.LayoutBounds="0, 0, 1, .20" AbsoluteLayout.LayoutFlags="All" />
+                                    <ContentView Content="{Binding Graph}" AbsoluteLayout.LayoutBounds="1, 0.66667, 0.85, 0.7" 
+                                                 AbsoluteLayout.LayoutFlags="All" />
+                                    <Label Text="{Binding CurrentValue}" AbsoluteLayout.LayoutFlags="All"
+                                           AbsoluteLayout.LayoutBounds="0.98, 0.2777, 0.15, 0.10" 
+                                           TextColor="White" FontAttributes="Bold" FontSize="18"
+                                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                                    <BoxView BackgroundColor="Black" AbsoluteLayout.LayoutBounds="0.15, 0.6667, 1, 0.7" 
+                                             AbsoluteLayout.LayoutFlags="PositionProportional, HeightProportional" />
+                                    <BoxView BackgroundColor="Black" AbsoluteLayout.LayoutBounds="1, 0.9, 0.85, 1" 
+                                             AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
+                                    <BoxView BackgroundColor="Black" IsVisible="{Binding ShowYAxisLabel}"
+                                             AbsoluteLayout.LayoutBounds="0.1237, 0.25, 0.03, 1" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
+                                    <Label Text="{Binding AxisLabelY}" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" TextColor="Black" FontSize="10"
+                                           IsVisible="{Binding ShowYAxisLabel}" AbsoluteLayout.LayoutBounds="0, 0.28125, 0.12, 0.20" AbsoluteLayout.LayoutFlags="All" />
+                                    <Label Text="{Binding AxisLabelX}" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="Black" FontSize="12"
+                                           AbsoluteLayout.LayoutBounds="0, 1, 1, 0.1" AbsoluteLayout.LayoutFlags="All" Margin="0,0,15,0" />
+                                </AbsoluteLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+                    
+            </AbsoluteLayout>
+            
+        </local:GradientColorStack>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>

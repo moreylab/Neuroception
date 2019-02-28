@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Report Event"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Neuroception"
+    x:Class="Neuroception.Pages.ReportEventFormPage"
+    NavigationPage.HasBackButton = "true">
+    
+    <ScrollView>
+    <local:GradientColorStack StartColor="{x:Static local:DataModels.AppConstants.BlueColor}" EndColor="{x:Static local:DataModels.AppConstants.OrangeColor}">
+        
+        <StackLayout x:Name="contentStack" VerticalOptions="Start" HorizontalOptions="Fill" />
+        <Button Style="{StaticResource LoginButtonStyle}" Image="icon_whitecheck.png" Text="SUBMIT" Clicked="DoneBtnClicked" WidthRequest="200"
+            HorizontalOptions="Center" VerticalOptions="Center" Margin="5, 0, 0, 10" />
+        
+        <!--<StackLayout Orientation="Horizontal" Margin="10, 15, 10, 15">
+            <Label Style="{StaticResource BodyTextStyle}" Text="How long ago did the anxiety episode start?" HorizontalOptions="Start" />
+            <Picker BackgroundColor="{x:Static local:DataModels.AppConstants.EntryBackgroundColor}" x:Name="startPicker" TextColor="Black" Title="select"
+                    SelectedIndexChanged="Handle_SelectedIndexChanged" WidthRequest="105" VerticalOptions="Fill" HorizontalOptions="End" />
+        </StackLayout>
+        <BoxView HorizontalOptions="Fill" BackgroundColor="Black" HeightRequest="1" />
+
+        <StackLayout Orientation="Horizontal" x:Name="endTimeStack" Margin="10, 10, 10, 15" IsVisible="false">
+            <Label Style="{StaticResource BodyTextStyle}" Text="How long did the anxiety episode last for?" HorizontalOptions="Start" />
+            <Picker BackgroundColor="{x:Static local:DataModels.AppConstants.EntryBackgroundColor}" x:Name="endPicker" TextColor="Black" Title="select"
+                    SelectedIndexChanged="Handle_SelectedIndexChanged" WidthRequest="105" VerticalOptions="Fill" HorizontalOptions="End" />
+        </StackLayout>
+        <BoxView x:Name="endTimeSpacer" HorizontalOptions="Fill" BackgroundColor="Black" HeightRequest="1" IsVisible="false" /> -->
+        <!-- define outside stack for full width! -->
+
+        <!--<StackLayout Margin="10, 10, 10, 0">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" >
+            <Label Style="{StaticResource BodyTextStyle}" VerticalOptions="Center" HorizontalOptions="Start" HorizontalTextAlignment="Start" >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Rate your anxiety on a scale from 1 - 10. ("/>
+                        <Span Text="1 = Mild, 10 = Extreme" FontAttributes="Italic"/>  
+                        <Span Text=")"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label x:Name="sliderLabel" BackgroundColor="{x:Static local:DataModels.AppConstants.EntryBackgroundColor}" WidthRequest="55" VerticalOptions="Fill"
+                   VerticalTextAlignment="Center" HorizontalOptions="End" HorizontalTextAlignment="Center" FontSize="16" TextColor="Black" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="70">
+            <Button Image="icon_heartdown.png" x:Name="ratingUp" WidthRequest="55" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="Transparent"
+                    Clicked="Handle_SliderDownButtonClicked" />
+            <Slider x:Name="ratingSlider" WidthRequest="200" HorizontalOptions="Center" Maximum="10" Minimum="1" MinimumTrackColor="Black" 
+                    MaximumTrackColor="Red" IsEnabled="false" />
+            <Button Image="icon_heartup.png" x:Name="ratingDown" WidthRequest="55" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="Transparent"
+                    Clicked="Handle_SliderUpButtonClicked" />
+        </StackLayout>
+        </StackLayout>
+        <BoxView HorizontalOptions="Fill" BackgroundColor="Black" HeightRequest="1" />-->
+            
+        <!--<StackLayout Margin="10, 10, 10, 10" x:Name="eventBtnStackLayout">
+            <Label Style="{StaticResource BodyTextStyle}" Margin="0, 0, 0, 5">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Have you done any of the following over the time window? ("/>
+                    <Span Text="Select all that apply" FontAttributes="Italic"/>  
+                    <Span Text=")"/>
+                </FormattedString>
+            </Label.FormattedText>
+            </Label>
+        </StackLayout>
+        <BoxView HorizontalOptions="Fill" BackgroundColor="Black" HeightRequest="1" />-->
+        
+    </local:GradientColorStack>
+    </ScrollView>
+    
+</ContentPage>

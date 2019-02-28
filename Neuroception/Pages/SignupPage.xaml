@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Neuroception" x:Class="Neuroception.SignupPage" >
+
+    <ContentPage.Resources>
+    </ContentPage.Resources>
+
+    <Grid>
+    <ScrollView>
+    <local:GradientColorStack StartColor="{x:Static local:DataModels.AppConstants.BlueColor}" EndColor="{x:Static local:DataModels.AppConstants.OrangeColor}" 
+                              VerticalOptions="Fill" HorizontalOptions="Fill" HeightRequest="900">
+        <Label Style="{DynamicResource TitleTextStyle}" Text="Create Account" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 15, 0, 10" />
+
+        <StackLayout Margin="20, 0, 20, 10">
+            <Label Style="{DynamicResource BodyTextStyle}" Text="Enter your subject identification number" HorizontalOptions="Start" HorizontalTextAlignment="Start" />
+            <Entry Style="{DynamicResource DefaultEntryStyle}" x:Name="idEntry" IsTextPredictionEnabled="false" TextChanged="CreateID_TextChanged" />
+            <Label Style="{DynamicResource SubtextTextStyle}" x:Name="idSublabel" Text="This is the unique ID number that was provided to you" />
+        </StackLayout>
+
+        <StackLayout Margin="20, 0, 20, 10">
+            <Label Style="{StaticResource BodyTextStyle}" Text="Create a username" HorizontalOptions="Start" HorizontalTextAlignment="Start" />
+            <Entry Style="{DynamicResource DefaultEntryStyle}" x:Name="usernameEntry" IsTextPredictionEnabled="false" TextChanged="CreateUsername_TextChanged" />
+            <Label Style="{StaticResource SubtextTextStyle}" x:Name="usernameSublabel" Text="Use this username to log into the application" />
+        </StackLayout>
+        
+        <StackLayout Margin="20, 0, 20, 10">
+            <Label Style="{DynamicResource BodyTextStyle}" Text="Pick a password" HorizontalOptions="Start" HorizontalTextAlignment="Start" />
+            <Entry Style="{DynamicResource DefaultEntryStyle}" TextChanged="CreatePassword_TextChanged" IsPassword="true" />
+            <Label Style="{DynamicResource SubtextTextStyle}" x:Name="pwdSublabel" Text="Use at least 8 characters" />
+        </StackLayout>
+
+        <StackLayout Margin="20, 0, 20, 15">
+            <Label Style="{DynamicResource BodyTextStyle}" Text="Confirm password" HorizontalOptions="Start" HorizontalTextAlignment="Start" />
+            <Entry Style="{DynamicResource DefaultEntryStyle}" x:Name="confirmPwdEntry" TextChanged="ConfirmPassword_TextChanged" IsPassword="true" />
+            <Label Style="{DynamicResource SubtextTextStyle}" x:Name="confirmPwdSublabel" Text="" />
+        </StackLayout>
+        
+        <Button Style="{DynamicResource LoginButtonStyle}" x:Name="signupBtn" Text="SIGN UP" BackgroundColor="{x:Static local:DataModels.AppConstants.DarkGrayColor}" 
+                HorizontalOptions="Center" Clicked="SignupBtnClicked" />
+    </local:GradientColorStack>
+    </ScrollView>
+
+    <ActivityIndicator x:Name="activityIndicator" Style="{StaticResource DefaultActivityIndicatorStyle}" />
+        
+    </Grid>
+    
+</ContentPage>

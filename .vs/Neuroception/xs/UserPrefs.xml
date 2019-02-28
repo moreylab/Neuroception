@@ -1,0 +1,39 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{07461CD4-3509-4F69-8A2C-D84A4A5E6407}|Default">
+  <MonoDevelop.Ide.ItemProperties.Neuroception.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7C48FFE2-C09D-4FDC-BA6B-A73DE9A00E76" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Neuroception/App.xaml.cs">
+    <Files>
+      <File FileName="Neuroception/App.xaml.cs" Line="200" Column="62" />
+      <File FileName="Neuroception/App.xaml" Line="77" Column="15" />
+      <File FileName="Neuroception/Pages/CheckInFormPage.xaml.cs" Line="54" Column="94" />
+      <File FileName="Neuroception/Pages/CheckInFormPage.xaml" Line="80" Column="1" />
+      <File FileName="Neuroception/Data Models/NetworkConnectivity.cs" Line="97" Column="10" />
+      <File FileName="Neuroception/Data Models/Handler_LocalSQLiteDatabase.cs" Line="131" Column="109" />
+      <File FileName="Neuroception/Data Models/Handler_DynamoDB.cs" Line="18" Column="1" />
+      <File FileName="Neuroception/Pages/BluetoothConnectionPage.xaml" Line="79" Column="20" />
+      <File FileName="Neuroception/Pages/BluetoothConnectionPage.xaml.cs" Line="34" Column="58" />
+      <File FileName="Neuroception/Pages/HomePage.xaml" Line="62" Column="85" />
+      <File FileName="Neuroception/Pages/HomePage.xaml.cs" Line="298" Column="12" />
+      <File FileName="Neuroception/Custom Controls/NavigationBar.cs" Line="82" Column="60" />
+      <File FileName="Neuroception/Custom Controls/SettingsMenu.cs" Line="51" Column="60" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Neuroception" expanded="True" selected="True">
+            <Node name="Neuroception" expanded="True">
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="Neuroception.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Neuroception.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.my_device" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

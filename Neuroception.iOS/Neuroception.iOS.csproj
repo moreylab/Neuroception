@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{07461CD4-3509-4F69-8A2C-D84A4A5E6407}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Neuroception.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Neuroception.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer: arnavpon@rwjms.rutgers.edu (PY2Q7PR68H)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Custom Controls\GradientColorStackRenderer.cs" />
+    <Compile Include="Interfaces\BluetoothManager.cs" />
+    <Compile Include="Interfaces\NotificationManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icon_user.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_user.imageset\icon_user.png" />
+    <ImageAsset Include="Assets.xcassets\icon_user.imageset\icon_user%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_user.imageset\icon_user%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_lock.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_lock.imageset\icon_lock.png" />
+    <ImageAsset Include="Assets.xcassets\icon_lock.imageset\icon_lock%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_lock.imageset\icon_lock%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_user2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_bluetooth.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_discover.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_healthtag.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_heartdown.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_heartup.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_pair.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_watch.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_whitecheck.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_user2.imageset\icon_user2.png" />
+    <ImageAsset Include="Assets.xcassets\icon_user2.imageset\icon_user2%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_user2.imageset\icon_user2%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_bluetooth.imageset\icon_bluetooth.png" />
+    <ImageAsset Include="Assets.xcassets\icon_bluetooth.imageset\icon_bluetooth%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_bluetooth.imageset\icon_bluetooth%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_discover.imageset\icon_discover.png" />
+    <ImageAsset Include="Assets.xcassets\icon_discover.imageset\icon_discover%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_discover.imageset\icon_discover%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_healthtag.imageset\icon_healthtag.png" />
+    <ImageAsset Include="Assets.xcassets\icon_healthtag.imageset\icon_healthtag%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_healthtag.imageset\icon_healthtag%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_heartdown.imageset\icon_heartdown.png" />
+    <ImageAsset Include="Assets.xcassets\icon_heartdown.imageset\icon_heartdown%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_heartdown.imageset\icon_heartdown%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_heartup.imageset\icon_heartup.png" />
+    <ImageAsset Include="Assets.xcassets\icon_heartup.imageset\icon_heartup%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_heartup.imageset\icon_heartup%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_pair.imageset\icon_pair.png" />
+    <ImageAsset Include="Assets.xcassets\icon_pair.imageset\icon_pair%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_pair.imageset\icon_pair%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_watch.imageset\icon_watch.png" />
+    <ImageAsset Include="Assets.xcassets\icon_watch.imageset\icon_watch%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_watch.imageset\icon_watch%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_whitecheck.imageset\icon_whitecheck.png" />
+    <ImageAsset Include="Assets.xcassets\icon_whitecheck.imageset\icon_whitecheck%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_whitecheck.imageset\icon_whitecheck%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_connected.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_connected.imageset\icon_connected.png" />
+    <ImageAsset Include="Assets.xcassets\icon_connected.imageset\icon_connected%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_connected.imageset\icon_connected%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_menu.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_menu.imageset\menu.png" />
+    <ImageAsset Include="Assets.xcassets\icon_menu.imageset\menu%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_menu.imageset\menu%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_info.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_info.imageset\icon_info.png" />
+    <ImageAsset Include="Assets.xcassets\icon_info.imageset\icon_info%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_info.imageset\icon_info%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_greencheck.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_greencheck.imageset\icon_greencheck.png" />
+    <ImageAsset Include="Assets.xcassets\icon_greencheck.imageset\icon_greencheck%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_greencheck.imageset\icon_greencheck%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_signal.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_signal.imageset\icon_signal.png" />
+    <ImageAsset Include="Assets.xcassets\icon_signal.imageset\icon_signal%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_signal.imageset\icon_signal%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_check.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_check.imageset\icon_check.png" />
+    <ImageAsset Include="Assets.xcassets\icon_check.imageset\icon_check%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_check.imageset\icon_check%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_background.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_background.imageset\icon_background.png" />
+    <ImageAsset Include="Assets.xcassets\icon_background.imageset\icon_background%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_background.imageset\icon_background%403x.png" />
+    <ImageAsset Include="Assets.xcassets\app_icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\app_icon.imageset\app_icon.png" />
+    <ImageAsset Include="Assets.xcassets\app_icon.imageset\app_icon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\app_icon.imageset\app_icon%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_settings.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_settings.imageset\icon_settings.png" />
+    <ImageAsset Include="Assets.xcassets\icon_settings.imageset\icon_settings%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_settings.imageset\icon_settings%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xam.Plugin.Geolocator">
+      <Version>4.5.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp">
+      <Version>1.60.3</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp.Views.Forms">
+      <Version>1.60.3</Version>
+    </PackageReference>
+    <PackageReference Include="AWSSDK.CognitoIdentity">
+      <Version>3.3.2.73</Version>
+    </PackageReference>
+    <PackageReference Include="AWSSDK.DynamoDBv2">
+      <Version>3.3.17.9</Version>
+    </PackageReference>
+    <PackageReference Include="AWSSDK.Mobile">
+      <Version>3.3.0.59</Version>
+    </PackageReference>
+    <PackageReference Include="AWSSDK.SimpleEmail">
+      <Version>3.3.7.34</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.4.0.1008975</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.TestCloud.Agent">
+      <Version>0.21.7</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.BluetoothLE">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.5.166-beta</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Neuroception\Neuroception.csproj">
+      <Project>{0993A902-CC4B-47DA-ACAC-918E3A783356}</Project>
+      <Name>Neuroception</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Custom Controls\" />
+    <Folder Include="Assets.xcassets\Icon_Lock.imageset\" />
+    <Folder Include="Assets.xcassets\icon_lock.imageset\" />
+    <Folder Include="Assets.xcassets\icon_user.imageset\" />
+    <Folder Include="Assets.xcassets\icon_lock.imageset\" />
+    <Folder Include="Assets.xcassets\icon_user2.imageset\" />
+    <Folder Include="Assets.xcassets\icon_bluetooth.imageset\" />
+    <Folder Include="Assets.xcassets\icon_discover.imageset\" />
+    <Folder Include="Assets.xcassets\icon_healthtag.imageset\" />
+    <Folder Include="Assets.xcassets\icon_heartdown.imageset\" />
+    <Folder Include="Assets.xcassets\icon_heartup.imageset\" />
+    <Folder Include="Assets.xcassets\icon_pair.imageset\" />
+    <Folder Include="Assets.xcassets\icon_watch.imageset\" />
+    <Folder Include="Assets.xcassets\icon_whitecheck.imageset\" />
+    <Folder Include="Assets.xcassets\icon_connected.imageset\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Assets.xcassets\icon_menu.imageset\" />
+    <Folder Include="Assets.xcassets\icon_info.imageset\" />
+    <Folder Include="Assets.xcassets\.imageset\" />
+    <Folder Include="Assets.xcassets\icon_greencheck.imageset\" />
+    <Folder Include="Assets.xcassets\icon_signal.imageset\" />
+    <Folder Include="Assets.xcassets\icon_check.imageset\" />
+    <Folder Include="Assets.xcassets\icon_background.imageset\" />
+    <Folder Include="Assets.xcassets\app_icon.imageset\" />
+    <Folder Include="Assets.xcassets\icon_settings.imageset\" />
+    <Folder Include="Assets.xcassets\icon_settings.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="awsconfiguration.json" />
+  </ItemGroup>
+</Project>

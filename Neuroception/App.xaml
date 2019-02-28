@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Neuroception"
+    xmlns:commands="clr-namespace:Neuroception.DataModels.Commands"
+    x:Class="Neuroception.App">
+    
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <commands:PairCommand x:Key="PairCommand" />
+            <commands:UnpairCommand x:Key="UnpairCommand" />
+            
+            <Color x:Key="buttonTextColor">White</Color>
+            <x:Double x:Key="titleFontSize">28.</x:Double>
+            <x:Double x:Key="bodyFontSize">18.</x:Double>
+            <x:Double x:Key="buttonFontSize">20.</x:Double>
+            <x:Double x:Key="buttonWidth">200.</x:Double>
+            <x:Double x:Key="buttonHeight">50.</x:Double>
+            <x:Int32 x:Key="buttonBorderRadius">25</x:Int32>
+
+            <!-- Platform-Specific Font Declarations -->
+            <OnPlatform x:Key="TitleFontFamilyName" x:TypeArguments="x:String" iOS="HelveticaNeue-Bold" Android="Droid Sans Mono" />
+            <OnPlatform x:Key="BodyFontFamilyName" x:TypeArguments="x:String" iOS="HelveticaNeue-Light" Android="Droid Sans Mono" />
+            <OnPlatform x:Key="ItalicizedBodyFontFamilyName" x:TypeArguments="x:String" iOS="HelveticaNeue-LightItalic" Android="Droid Sans Mono" />
+            <OnPlatform x:Key="SubtextFontFamilyName" x:TypeArguments="x:String" iOS="HelveticaNeue" Android="Droid Sans Mono" />
+            <OnPlatform x:Key="ButtonFontFamilyName" x:TypeArguments="x:String" iOS="HelveticaNeue-Medium" Android="Droid Sans Mono" />
+
+            <Style x:Key="LoginButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="{StaticResource buttonFontSize}" />
+                <Setter Property="FontFamily" Value="{DynamicResource ButtonFontFamilyName}" />
+                <Setter Property="TextColor" Value="{StaticResource buttonTextColor}" />
+                <Setter Property="CornerRadius" Value="{StaticResource buttonBorderRadius}" />
+                <Setter Property="HeightRequest" Value="{StaticResource buttonHeight}"/>
+                <Setter Property="WidthRequest" Value="{StaticResource buttonWidth}"/>
+                <Setter Property="BackgroundColor" Value="{x:Static local:DataModels.AppConstants.DarkBlueColor}" />
+            </Style>
+
+            <Style x:Key="TitleTextStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{DynamicResource TitleFontFamilyName}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="{StaticResource titleFontSize}" />
+                <Setter Property="TextColor" Value="{x:Static local:DataModels.AppConstants.DarkBlueColor}" />
+            </Style>
+
+            <Style x:Key="BodyTextStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{DynamicResource BodyFontFamilyName}" />
+                <Setter Property="FontSize" Value="{StaticResource bodyFontSize}" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+
+            <Style x:Key="SubtextTextStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{DynamicResource BodyFontFamilyName}" />
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="TextColor" Value="{x:Static local:DataModels.AppConstants.TextGrayColor}" />
+            </Style>
+
+            <Style x:Key="DefaultEntryStyle" TargetType="Entry">
+                <Setter Property="FontSize" Value="{StaticResource bodyFontSize}" />
+                <Setter Property="FontFamily" Value="{DynamicResource BodyFontFamilyName}" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="{x:Static local:DataModels.AppConstants.EntryBackgroundColor}" />
+                <Setter Property="HeightRequest" Value="50" />
+            </Style>
+
+            <Style x:Key="DefaultActivityIndicatorStyle" TargetType="ActivityIndicator">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="WidthRequest" Value="40" />
+                <Setter Property="IsVisible" Value="false" />
+            </Style>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
